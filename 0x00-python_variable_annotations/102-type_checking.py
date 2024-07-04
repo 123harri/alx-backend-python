@@ -2,10 +2,10 @@
 """
 Type Checking
 """
-from typing import Tuple, List
+from typing import Union, Any, Mapping, Tuple, List
 
 
-def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """
     Zooms into the tuple by repeating each
     element according to the given factor.
@@ -18,7 +18,7 @@ def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
         List[int]: The zoomed-in list where each
         element is repeated according to the factor.
     """
-    zoomed_in: List[int] = [
+    zoomed_in: List = [
         item for item in lst
         for i in range(factor)
     ]
@@ -28,4 +28,5 @@ def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
 array = tuple([12, 72, 91])
 
 zoom_2x = zoom_array(array)
-zoom_3x = zoom_array(array, 3)
+
+zoom_3x = zoom_array(array, int(3.0))
