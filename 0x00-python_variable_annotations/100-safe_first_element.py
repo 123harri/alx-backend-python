@@ -1,26 +1,23 @@
 #!/usr/bin/env python3
 """
 This module provides a function to safely
-retrieve the first element of a list.
+retrieve the first element of a sequence.
 """
 
-from typing import Sequence, TypeVar, Union
-
-# Define a type variable T
-T = TypeVar('T')
+from typing import Sequence, Any, Union
 
 
-def safe_first_element(lst: Sequence[T]) -> Union[T, None]:
+def safe_first_element(lst: Sequence) -> Union[Any, None]:
     """
-    Safely returns the first element of the list,
-    or None if the list is empty.
+    Safely returns the first element of the sequence,
+    or None if the sequence is empty.
 
     Args:
-        lst (Sequence): The input list.
+        lst (Sequence): The input sequence.
 
     Returns:
-        Union[T, None]: The first element of the list
-        or None if the list is empty.
+        Union[Any, None]: The first element of the sequence
+        or None if the sequence is empty.
     """
     if lst:
         return lst[0]
