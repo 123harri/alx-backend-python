@@ -7,13 +7,13 @@ retrieve the first element of a sequence.
 from typing import Sequence, Any, Union
 
 
-def safe_first_element(lst: Sequence) -> Union[Any, None]:
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """
-    Safely returns the first element of the sequence,
-    or None if the sequence is empty.
+    Returns the first element of a sequence
+    if it exists, otherwise returns None.
 
     Args:
-        lst (Sequence): The input sequence.
+        lst (Sequence[Any]): The input sequence.
 
     Returns:
         Union[Any, None]: The first element of the
